@@ -1,0 +1,2 @@
+# Cloudflare Pages serves each pre-rendered route from /out.
+# No SPA catch-all needed — Next static export already emits per-route HTML.
