@@ -1,0 +1,28 @@
+.hero {
+  padding: clamp(3rem, 6vw, 5rem) 0 2.5rem;
+}
+
+.hero h1 {
+  max-width: 16ch;
+}
+
+.desc {
+  margin-bottom: 1.5rem;
+}
+
+.dark {
+  background:
+    radial-gradient(800px 400px at 90% 0%, rgba(13, 126, 199, 0.35), transparent 60%),
+    linear-gradient(160deg, #07121f 0%, #10263c 100%);
+  color: white;
+  padding-bottom: 3.5rem;
+}
+
+.dark h1,
+.dark .eyebrow {
+  color: white;
+}
+
+.dark .desc {
+  color: rgba(247, 250, 252, 0.78);
+}

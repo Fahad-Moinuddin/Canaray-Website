@@ -1,0 +1,32 @@
+.wrap {
+  display: grid;
+  place-items: center;
+  min-height: 70vh;
+}
+
+.card {
+  width: min(100%, 440px);
+  display: grid;
+  gap: 0.85rem;
+}
+
+.card h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.success {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--signal-soft);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}

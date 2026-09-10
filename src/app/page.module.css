@@ -1,0 +1,294 @@
+.hero {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(3rem, 6vw, 5rem);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.brandTitle {
+  display: grid;
+  gap: 0.45rem;
+  max-width: none;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  margin-bottom: 0.8rem;
+}
+
+.brandTitle span {
+  display: block;
+  max-width: 12ch;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-weight: 560;
+  color: var(--ink-3);
+  letter-spacing: -0.03em;
+}
+
+.heroLead {
+  font-size: clamp(1.1rem, 1.6vw, 1.28rem);
+  max-width: 36rem;
+  margin-bottom: 1.4rem;
+}
+
+.pathSplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.pathCard {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 1.05rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  transition: border-color 160ms var(--ease), transform 160ms var(--ease),
+    box-shadow 160ms var(--ease);
+  min-height: 132px;
+}
+
+.pathCard:hover {
+  border-color: rgba(13, 126, 199, 0.45);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  color: inherit;
+}
+
+.pathLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue-deep);
+}
+
+.pathCard strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.pathCard span:last-child {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.heroVisual {
+  position: relative;
+}
+
+.visualFrame {
+  position: relative;
+  overflow: hidden;
+  border-radius: calc(var(--radius-xl) + 4px);
+  background: #0b1726;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(7, 18, 31, 0.25);
+  aspect-ratio: 4 / 5;
+  max-height: 640px;
+}
+
+.heroVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visualCaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.1rem 1.15rem 1.2rem;
+  background: linear-gradient(180deg, transparent, rgba(7, 18, 31, 0.88));
+  color: white;
+}
+
+.visualCaption p {
+  margin-top: 0.55rem;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.95rem;
+}
+
+.sectionHead {
+  margin-bottom: 2rem;
+  max-width: 46rem;
+}
+
+.tech {
+  background: linear-gradient(180deg, rgba(7, 18, 31, 0.03), transparent 40%);
+}
+
+.techPoints {
+  margin-top: 1.75rem;
+}
+
+.techPoints h3 {
+  margin-bottom: 0.35rem;
+}
+
+.serviceLink {
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  transition: border-color 160ms var(--ease), transform 160ms var(--ease);
+  min-height: 180px;
+}
+
+.serviceLink:hover {
+  border-color: rgba(13, 126, 199, 0.4);
+  transform: translateY(-2px);
+  color: inherit;
+}
+
+.serviceLink h3 {
+  margin: 0;
+}
+
+.how {
+  background:
+    radial-gradient(700px 300px at 0% 0%, rgba(15, 156, 156, 0.08), transparent 50%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.2));
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  counter-reset: none;
+}
+
+.steps li {
+  display: grid;
+  gap: 0.85rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: white;
+  border: 1px solid var(--line);
+  min-height: 220px;
+}
+
+.steps span {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--blue);
+  letter-spacing: 0.08em;
+}
+
+.trust {
+  background: var(--ink);
+  color: white;
+}
+
+.trust h2,
+.trust .eyebrow {
+  color: white;
+}
+
+.trust .lead {
+  color: rgba(247, 250, 252, 0.72);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 0;
+}
+
+.stats > div {
+  padding: 1.1rem 1.15rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats dt {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.stats dd {
+  margin: 0.25rem 0 0;
+  color: rgba(247, 250, 252, 0.68);
+  font-size: 0.92rem;
+}
+
+.finalCta {
+  padding-top: 0;
+}
+
+.ctaPanel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: center;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(600px 240px at 100% 0%, rgba(126, 208, 255, 0.25), transparent 55%),
+    linear-gradient(135deg, #0a5f97, #0f9c9c 120%);
+  color: white;
+}
+
+.ctaPanel h2,
+.ctaPanel .eyebrow {
+  color: white;
+}
+
+.ctaPanel p {
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 36rem;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 980px) {
+  .heroGrid,
+  .trustGrid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .visualFrame {
+    aspect-ratio: 16 / 11;
+    max-height: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .pathSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .brandTitle span {
+    max-width: none;
+  }
+}

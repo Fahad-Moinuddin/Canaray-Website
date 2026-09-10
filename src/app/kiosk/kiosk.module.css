@@ -1,0 +1,31 @@
+.page {
+  min-height: calc(100vh - 120px);
+  background: linear-gradient(180deg, #07121f 0%, #10263c 35%, #eef3f8 35%);
+}
+
+.top {
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto;
+  padding: 2rem 0 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.top h1 {
+  color: white;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+}
+
+.top p {
+  color: rgba(247, 250, 252, 0.78);
+  max-width: 40rem;
+}
+
+.body {
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto 3rem;
+}

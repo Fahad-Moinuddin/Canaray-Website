@@ -1,0 +1,188 @@
+.shell {
+  display: grid;
+  gap: 1.35rem;
+}
+
+.shell h2 {
+  margin-bottom: 0.35rem;
+}
+
+.kiosk {
+  font-size: 1.05rem;
+}
+
+.kiosk .choice,
+.kiosk .time {
+  min-height: 88px;
+  font-size: 1.1rem;
+}
+
+.fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.fieldset legend {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 650;
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+}
+
+.choiceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.choice,
+.time {
+  display: grid;
+  gap: 0.3rem;
+  align-content: start;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--line-strong);
+  background: white;
+  cursor: pointer;
+  min-height: 96px;
+}
+
+.choice input,
+.time input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice span,
+.time {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.choice strong {
+  color: var(--ink);
+}
+
+.choice em {
+  font-style: normal;
+  font-size: 0.82rem;
+  color: var(--blue-deep);
+}
+
+.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(13, 126, 199, 0.14);
+  background: var(--blue-soft);
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.55rem;
+}
+
+.time {
+  place-items: center;
+  text-align: center;
+  min-height: 56px;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.inlineFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.consentBox {
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius);
+  background: var(--mist);
+  border: 1px solid var(--line);
+  margin-bottom: 0.75rem;
+  color: var(--ink-3);
+}
+
+.signature {
+  min-height: 96px !important;
+  font-family: "Segoe Script", "Bradley Hand", cursive;
+  font-size: 1.45rem;
+  padding-top: 1.4rem !important;
+  padding-bottom: 1.4rem !important;
+}
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.summary > div {
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius);
+  background: var(--mist);
+}
+
+.summary dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.summary dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.pricePanel {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, #07121f, #123049);
+  color: white;
+}
+
+.pricePanel > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricePanel span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.priceTotal {
+  border-bottom: 0 !important;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 720px) {
+  .choiceGrid,
+  .inlineFields,
+  .summary {
+    grid-template-columns: 1fr;
+  }
+}

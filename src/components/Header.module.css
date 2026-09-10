@@ -1,0 +1,159 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgba(243, 246, 249, 0.86);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand:hover {
+  color: inherit;
+}
+
+.mark {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.wordmark {
+  display: grid;
+  line-height: 1.05;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.wordmark small {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: 0.5rem;
+  flex: 1;
+}
+
+.navLink {
+  padding: 0.55rem 0.65rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--ink-3);
+  font-size: 0.92rem;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  background: rgba(13, 126, 199, 0.08);
+  color: var(--blue-deep);
+}
+
+.actions {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: auto;
+}
+
+.login {
+  margin-right: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.login:hover {
+  color: var(--blue-deep);
+}
+
+.mobile {
+  margin-left: auto;
+  position: relative;
+}
+
+.menuBtn {
+  list-style: none;
+  min-height: 44px;
+  min-width: 72px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  background: white;
+}
+
+.menuBtn::-webkit-details-marker {
+  display: none;
+}
+
+.drawer {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  width: min(88vw, 320px);
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.drawer a {
+  text-decoration: none;
+  padding: 0.7rem 0.75rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.drawer a:hover {
+  background: var(--mist);
+}
+
+.drawer hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0.35rem 0;
+}
+
+@media (min-width: 1100px) {
+  .nav,
+  .actions {
+    display: flex;
+  }
+
+  .mobile {
+    display: none;
+  }
+}

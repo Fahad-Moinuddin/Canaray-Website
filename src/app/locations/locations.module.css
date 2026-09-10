@@ -1,0 +1,45 @@
+.region + .region {
+  margin-top: 2.5rem;
+}
+
+.region h2 {
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.card {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+  padding: 1.15rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+  min-height: 190px;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--blue-deep);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

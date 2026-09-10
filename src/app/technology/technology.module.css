@@ -1,0 +1,29 @@
+.intro {
+  max-width: 44rem;
+  margin-bottom: 1.75rem;
+}
+
+.videoBlock {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  background: white;
+  border: 1px solid var(--line);
+}
+
+.video {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  background: #0b1726;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .videoBlock {
+    grid-template-columns: 1fr;
+  }
+}
