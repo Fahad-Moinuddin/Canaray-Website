@@ -8,11 +8,8 @@ export function Header() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.brand} aria-label={`${SITE.name} home`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={ASSETS.logo} alt="" width={36} height={36} className={styles.mark} />
-          <span className={styles.wordmark}>
-            Canaray
-            <small>Oral radiology</small>
-          </span>
+          <img src={ASSETS.logo} alt="" width={32} height={32} className={styles.mark} />
+          <span className={styles.wordmark}>Canaray</span>
         </Link>
 
         <nav className={styles.nav} aria-label="Primary">
@@ -25,10 +22,10 @@ export function Header() {
 
         <div className={styles.actions}>
           <Link href="/login" className={styles.login}>
-            Professional login
+            Login
           </Link>
-          <Link href="/refer" className="btn btn-ghost btn-sm">
-            Refer a patient
+          <Link href="/refer" className={styles.secondaryAction}>
+            Refer
           </Link>
           <Link href="/book" className="btn btn-primary btn-sm">
             Book appointment

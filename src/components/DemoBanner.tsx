@@ -6,7 +6,7 @@ export function DemoBanner() {
       <strong>Vision POC</strong>
       <span>
         Frontend demonstration only — booking, referrals, login, and uploads are simulated.{" "}
-        <Link href="/about#poc-notes" style={{ color: "#7ed0ff" }}>
+        <Link href="/about#poc-notes" style={{ color: "#9ed4f5" }}>
           Learn more
         </Link>
       </span>

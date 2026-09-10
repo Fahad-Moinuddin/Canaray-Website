@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <strong style={{ fontFamily: "var(--font-display)", fontSize: "1.4rem" }}>
+            <strong style={{ fontFamily: "var(--font-display)", fontSize: "1.5rem", letterSpacing: "-0.03em", fontWeight: 650 }}>
               Canaray
             </strong>
             <p>

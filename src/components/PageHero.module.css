@@ -1,9 +1,15 @@
 .hero {
-  padding: clamp(3rem, 6vw, 5rem) 0 2.5rem;
+  position: relative;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0 clamp(2.75rem, 5vw, 3.5rem);
+  background:
+    radial-gradient(700px 320px at 100% 0%, rgba(13, 126, 199, 0.08), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, transparent 100%);
 }
 
 .hero h1 {
-  max-width: 16ch;
+  max-width: 14ch;
+  font-weight: 560;
+  letter-spacing: -0.035em;
 }
 
 .desc {
@@ -12,8 +18,8 @@
 
 .dark {
   background:
-    radial-gradient(800px 400px at 90% 0%, rgba(13, 126, 199, 0.35), transparent 60%),
-    linear-gradient(160deg, #07121f 0%, #10263c 100%);
+    radial-gradient(700px 360px at 90% 0%, rgba(13, 126, 199, 0.28), transparent 55%),
+    linear-gradient(165deg, #0b1724 0%, #14324a 100%);
   color: white;
   padding-bottom: 3.5rem;
 }

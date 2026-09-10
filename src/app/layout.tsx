@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Source_Sans_3, IBM_Plex_Mono } from "next/font/google";
+import { Outfit, Manrope, IBM_Plex_Mono } from "next/font/google";
 import { DemoBanner } from "@/components/DemoBanner";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import "@/styles/globals.css";
 
-const display = Bricolage_Grotesque({
+const display = Outfit({
   subsets: ["latin"],
   variable: "--font-display-loaded",
   display: "swap",
 });
 
-const body = Source_Sans_3({
+const body = Manrope({
   subsets: ["latin"],
   variable: "--font-body-loaded",
   display: "swap",
@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         style={
           {
-            ["--font-display" as string]: "var(--font-display-loaded), Bricolage Grotesque, sans-serif",
-            ["--font-body" as string]: "var(--font-body-loaded), Source Sans 3, sans-serif",
+            ["--font-display" as string]: "var(--font-display-loaded), Outfit, sans-serif",
+            ["--font-body" as string]: "var(--font-body-loaded), Manrope, sans-serif",
             ["--font-mono" as string]: "var(--font-mono-loaded), IBM Plex Mono, monospace",
           } as React.CSSProperties
         }

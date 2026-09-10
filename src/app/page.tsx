@@ -9,64 +9,72 @@ export default function HomePage() {
   return (
     <>
       <section className={styles.hero}>
-        <div className={`container ${styles.heroGrid}`}>
+        <div className={styles.heroMedia} aria-hidden="true">
+          <video
+            className={styles.heroVideo}
+            src={ASSETS.heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={ASSETS.icons.laptop}
+          />
+          <div className={styles.heroScrim} />
+        </div>
+
+        <div className={`container ${styles.heroContent}`}>
           <div className={`${styles.heroCopy} reveal`}>
-            <p className="eyebrow">Oral & maxillofacial radiology</p>
-            <h1 className={styles.brandTitle}>
-              Canaray
-              <span>Clarity in every dimension.</span>
-            </h1>
+            <p className={styles.brand}>Canaray</p>
+            <h1 className={styles.headline}>Clarity in every dimension.</h1>
             <p className={styles.heroLead}>
-              Specialist dental imaging and interactive 3D reports — designed to make complex
-              anatomy understandable for patients and decisive for dentists.
+              Specialist dental imaging and interactive 3D reports — designed to make complex anatomy
+              understandable for patients and decisive for dentists.
             </p>
-            <div className={styles.pathSplit}>
-              <Link href="/patients" className={styles.pathCard}>
-                <span className={styles.pathLabel}>I&apos;m a patient</span>
-                <strong>Understand your visit</strong>
-                <span>What to expect, how booking works, and what happens after your scan.</span>
-              </Link>
-              <Link href="/dentists" className={styles.pathCard}>
-                <span className={styles.pathLabel}>I&apos;m a dental professional</span>
-                <strong>Refer with confidence</strong>
-                <span>Start referrals, review imaging options, and explore true 3D reporting.</span>
-              </Link>
-            </div>
-            <div className="btn-row">
+            <div className={`btn-row ${styles.heroActions}`}>
               <Link href="/book" className="btn btn-primary btn-lg">
                 Book an appointment
               </Link>
-              <Link href="/refer" className="btn btn-ghost btn-lg">
+              <Link href="/refer" className="btn btn-on-dark-ghost btn-lg">
                 Start a referral
               </Link>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className={`${styles.heroVisual} reveal`} style={{ animationDelay: "120ms" }}>
-            <div className={styles.visualFrame}>
-              <video
-                className={styles.heroVideo}
-                src={ASSETS.heroVideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                poster={ASSETS.icons.laptop}
-                aria-label="Demonstration of Canaray interactive 3D reporting"
-              />
-              <div className={styles.visualCaption}>
-                <span className="demo-pill">Product vision</span>
-                <p>Interactive 3D reporting — patients are 3D, CBCTs are 3D, reports should be too.</p>
-              </div>
-            </div>
+      <section className={`section ${styles.paths}`}>
+        <div className="container">
+          <div className={`${styles.sectionHead} reveal`}>
+            <p className="eyebrow">Who you are</p>
+            <h2>Two clear paths into Canaray</h2>
+            <p className="lead">
+              Patients get reassurance and a simple booking journey. Dental professionals get a faster
+              path to referrals and true 3D reporting.
+            </p>
+          </div>
+          <div className={`${styles.pathList} reveal`} style={{ animationDelay: "80ms" }}>
+            <Link href="/patients" className={styles.pathLink}>
+              <span className={styles.pathLabel}>Patients</span>
+              <strong>Understand your visit</strong>
+              <span className={styles.pathArrow} aria-hidden="true">
+                →
+              </span>
+            </Link>
+            <Link href="/dentists" className={styles.pathLink}>
+              <span className={styles.pathLabel}>Dental professionals</span>
+              <strong>Refer with confidence</strong>
+              <span className={styles.pathArrow} aria-hidden="true">
+                →
+              </span>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className={`section ${styles.tech}`}>
         <div className="container">
-          <div className={styles.sectionHead}>
+          <div className={`${styles.sectionHead} reveal`}>
             <p className="eyebrow">Technology</p>
             <h2>True 3D reports — not PDFs pretending to be 3D</h2>
             <p className="lead">
@@ -74,22 +82,24 @@ export default function HomePage() {
               clinicians and patients can see exactly what the radiologist is describing.
             </p>
           </div>
-          <ViewerDemo />
-          <div className={`${styles.techPoints} grid-3`}>
-            <div>
+          <div className="reveal" style={{ animationDelay: "100ms" }}>
+            <ViewerDemo />
+          </div>
+          <ul className={`${styles.techPoints} reveal`} style={{ animationDelay: "160ms" }}>
+            <li>
               <h3>Evidence you can locate</h3>
               <p>Findings are accompanied by scrollable 3D references in the CBCT volume.</p>
-            </div>
-            <div>
+            </li>
+            <li>
               <h3>Built for treatment conversations</h3>
               <p>Clear presentation helps dentists explain options and plan care with patients.</p>
-            </div>
-            <div>
+            </li>
+            <li>
               <h3>PDF when you need it</h3>
               <p>Traditional exports remain available — without making them the only interface.</p>
-            </div>
-          </div>
-          <div className="btn-row" style={{ marginTop: "1.5rem" }}>
+            </li>
+          </ul>
+          <div className="btn-row" style={{ marginTop: "1.75rem" }}>
             <Link href="/technology" className="btn btn-secondary">
               Explore 3D reporting
             </Link>
@@ -102,7 +112,7 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container">
-          <div className={styles.sectionHead}>
+          <div className={`${styles.sectionHead} reveal`}>
             <p className="eyebrow">Services</p>
             <h2>Imaging organized around clinical intent</h2>
             <p className="lead">
@@ -110,15 +120,17 @@ export default function HomePage() {
               and dentists can find the right path quickly.
             </p>
           </div>
-          <div className={`grid-3 ${styles.serviceGrid}`}>
+          <ul className={`${styles.serviceList} reveal`} style={{ animationDelay: "80ms" }}>
             {servicePreview.map((service) => (
-              <Link key={service.id} href={`/services#${service.id}`} className={styles.serviceLink}>
-                <span className="demo-pill">CBCT</span>
-                <h3>{service.name}</h3>
-                <p>{service.summary}</p>
-              </Link>
+              <li key={service.id}>
+                <Link href={`/services#${service.id}`} className={styles.serviceLink}>
+                  <span className={styles.serviceMeta}>CBCT</span>
+                  <span className={styles.serviceName}>{service.name}</span>
+                  <span className={styles.serviceSummary}>{service.summary}</span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
           <div className="btn-row" style={{ marginTop: "1.5rem" }}>
             <Link href="/services" className="btn btn-ghost">
               See all services
@@ -129,11 +141,11 @@ export default function HomePage() {
 
       <section className={`section ${styles.how}`}>
         <div className="container">
-          <div className={styles.sectionHead}>
+          <div className={`${styles.sectionHead} reveal`}>
             <p className="eyebrow">How it works</p>
             <h2>A clear path from appointment to report</h2>
           </div>
-          <ol className={styles.steps}>
+          <ol className={`${styles.steps} reveal`} style={{ animationDelay: "80ms" }}>
             <li>
               <span>01</span>
               <div>
@@ -159,7 +171,10 @@ export default function HomePage() {
               <span>04</span>
               <div>
                 <h3>Radiographic report</h3>
-                <p>Results are delivered in an interactive 3D experience, with traditional formats available.</p>
+                <p>
+                  Results are delivered in an interactive 3D experience, with traditional formats
+                  available.
+                </p>
               </div>
             </li>
           </ol>
@@ -168,7 +183,7 @@ export default function HomePage() {
 
       <section className={`section-tight ${styles.trust}`}>
         <div className="container">
-          <div className={styles.trustGrid}>
+          <div className={`${styles.trustGrid} reveal`}>
             <div>
               <p className="eyebrow">Trusted across Canada</p>
               <h2>Built for clinical confidence</h2>
@@ -201,7 +216,7 @@ export default function HomePage() {
 
       <section className={`section ${styles.finalCta}`}>
         <div className="container">
-          <div className={styles.ctaPanel}>
+          <div className={`${styles.ctaPanel} reveal`}>
             <div>
               <p className="eyebrow">Next step</p>
               <h2>Choose the experience built for you</h2>
@@ -211,10 +226,10 @@ export default function HomePage() {
               </p>
             </div>
             <div className={styles.ctaActions}>
-              <Link href="/book" className="btn btn-on-dark btn-lg">
+              <Link href="/book" className="btn btn-primary btn-lg">
                 Book as a patient
               </Link>
-              <Link href="/refer" className="btn btn-on-dark-ghost btn-lg">
+              <Link href="/refer" className="btn btn-ghost btn-lg">
                 Refer as a dentist
               </Link>
             </div>
